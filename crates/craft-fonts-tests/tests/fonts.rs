@@ -325,3 +325,28 @@ fn latin_variable_styles_are_variable_fonts() {
         );
     }
 }
+
+#[test]
+fn thai_fonts_cover_thai_text() {
+    covers(
+        "Thai",
+        concat!(
+            "กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรฤลฦวศษสหฬอฮ",
+            "ะัาำิีึืุูเแโใไๅ็่้๊๋์",
+            "๐๑๒๓๔๕๖๗๘๙",
+            "ฯๆ฿",
+        ),
+    );
+}
+
+#[test]
+fn georgian_fonts_cover_georgian_text() {
+    covers(
+        "Geor",
+        concat!(
+            "აბგდევზთიკლმნოპჟრსტუფქღყშჩცძწჭხჯჰ",
+            "ᲐᲑᲒᲓᲔᲕᲖᲗᲘᲙᲚᲛᲜᲝᲞᲟᲠᲡᲢᲣᲤᲥᲦᲧᲨᲩᲪᲫᲬᲭᲮᲯᲰ",
+            "„“–№",
+        ),
+    );
+}
